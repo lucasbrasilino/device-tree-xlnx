@@ -301,7 +301,7 @@ proc gen_phy_node args {
 
 proc is_ethsupported_target {connected_ip} {
    set connected_ipname [get_property IP_NAME $connected_ip]
-   if {$connected_ipname == "axi_dma" || $connected_ipname == "axi_fifo_mm_s"} {
+   if {$connected_ipname == "axi_dma" || $connected_ipname == "axi_fifo_mm_s" || $connected_ipname == "axis_data_fifo" } {
       return "true"
    } else {
       return "false"
